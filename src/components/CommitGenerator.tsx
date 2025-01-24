@@ -11,10 +11,12 @@ const CommitGenerator: React.FC = () => {
 		setLoading(true);
 		setError("");
 
+		const endpoint: any = import.meta.env.VITE_APP_API_ENDPOINT;
+
 		try {
 			// Petición al backend
 			const response = await axios.post(
-				"http://13.38.245.166:8000/generate-commit",
+				endpoint,
 				{
 					prompt: input,
 				},
@@ -24,8 +26,6 @@ const CommitGenerator: React.FC = () => {
 					},
 				}
 			);
-
-			console.log(response);
 			setCommitMessage(response.data.commitMessage);
 		} catch (err: any) {
 			setError(

@@ -1,10 +1,10 @@
-import Header from "./components/Header";
 import "./App.css";
+import CommitGenerator from "./components/CommitGenerator";
 
 function App() {
 	return (
 		<>
-			<Header />
+			<CommitGenerator />
 		</>
 	);
 }

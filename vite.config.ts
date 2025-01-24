@@ -10,7 +10,7 @@ export default defineConfig({
 			name: "commit-generator-remote",
 			filename: "remoteEntry.js",
 			exposes: {
-				"./Header": "./src/components/Header",
+				"./CommitGenerator": "./src/components/CommitGenerator",
 			},
 			remotes: {},
 			shared: ["react", "react-dom"],
